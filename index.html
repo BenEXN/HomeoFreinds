@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeoSphere Tamagotchi - Chapitre H1</title>
     <meta name="description" content="Tester l'économie homéostatique avec un Tamagotchi écologique">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- PhaserJS (optionnel) -->
+    <!-- Phaser doit être en premier -->
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
 </head>
 <body>
@@ -20,55 +17,49 @@
 
     <main>
         <div id="game-container">
-            <div id="environment-container">
-                <div id="environment-status">
-                    <!-- Les couleurs de l'environnement seront ajoutées ici -->
+            <!-- [Votre contenu existant...] -->
+        </div>
+
+        <!-- Ajout des conteneurs de stats -->
+        <div id="stats-container">
+            <div>
+                <div class="economy-label">
+                    <span>Mode économique:</span>
+                    <span class="economy-mode" id="economy-mode">Standard</span>
                 </div>
-
-                <div id="env-elements">
-                    <!-- Éléments environnementaux avec chemins SVG mis à jour -->
-                    <div class="env-element tree" style="background-image: url('assets/tree.svg')"></div>
-                    <div class="env-element cloud" style="background-image: url('assets/cloud.svg')"></div>
-                    <div class="env-element trash" style="background-image: url('assets/trash.svg')"></div>
+                <div>
+                    <label>Confort</label>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="comfort-fill" style="width: 50%;"></div>
+                    </div>
                 </div>
-
-                <div id="tamagotchi-container">
-                    <div id="tamagotchi-status"></div>
-                    <div class="bubble" id="tamagotchi-bubble"></div>
-
-                    <div id="tamagotchi">
-                        <div id="tamagotchi-comfort">
-                            <div class="comfort-segment" id="comfort-segment-1"></div>
-                            <div class="comfort-segment" id="comfort-segment-2"></div>
-                            <div class="comfort-segment" id="comfort-segment-3"></div>
-                            <div class="comfort-segment" id="comfort-segment-4"></div>
-                        </div>
-                        <div id="tamagotchi-face"></div>
-                        <div class="tamagotchi-items">
-                            <!-- Objets avec chemins SVG mis à jour -->
-                            <div class="tama-item item-book" style="background-image: url('assets/item-book.svg')"></div>
-                            <div class="tama-item item-tv" style="background-image: url('assets/item-tv.svg')"></div>
-                        </div>
+                <div>
+                    <label>Écologie</label>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="ecology-fill" style="width: 70%;"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- [Rest of your HTML structure...] -->
+        <div id="action-container">
+            <div id="day-indicator">Jour 1 - Actions restantes: 7</div>
+            <div id="cards-container">
+                <!-- Les cartes seront ajoutées ici par JS -->
+            </div>
+        </div>
 
-        <!-- Écrans (welcome, mode selection, etc.) -->
+        <!-- Écrans -->
         <div id="welcome-screen">
             <div class="screen-content">
                 <h2>Bienvenue dans HomeoSphere Tamagotchi</h2>
                 <button class="button" id="start-button">Commencer</button>
             </div>
         </div>
-
-        <!-- [Other screen divs...] -->
     </main>
 
-    <!-- JS -->
-    <script type="module" src="js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/init.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
