@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeoSphere Tamagotchi - Chapitre H1</title>
+    <meta name="description" content="Tester l'économie homéostatique avec un Tamagotchi écologique">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PhaserJS (optionnel) -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="title">HomeoSphere Tamagotchi</div>
+        <div class="version">Chapitre H1 v1.0</div>
+    </header>
+
+    <main>
+        <div id="game-container">
+            <div id="environment-container">
+                <div id="environment-status">
+                    <!-- Les couleurs de l'environnement seront ajoutées ici -->
+                </div>
+
+                <div id="env-elements">
+                    <!-- Éléments environnementaux avec chemins SVG mis à jour -->
+                    <div class="env-element tree" style="background-image: url('assets/tree.svg')"></div>
+                    <div class="env-element cloud" style="background-image: url('assets/cloud.svg')"></div>
+                    <div class="env-element trash" style="background-image: url('assets/trash.svg')"></div>
+                </div>
+
+                <div id="tamagotchi-container">
+                    <div id="tamagotchi-status"></div>
+                    <div class="bubble" id="tamagotchi-bubble"></div>
+
+                    <div id="tamagotchi">
+                        <div id="tamagotchi-comfort">
+                            <div class="comfort-segment" id="comfort-segment-1"></div>
+                            <div class="comfort-segment" id="comfort-segment-2"></div>
+                            <div class="comfort-segment" id="comfort-segment-3"></div>
+                            <div class="comfort-segment" id="comfort-segment-4"></div>
+                        </div>
+                        <div id="tamagotchi-face"></div>
+                        <div class="tamagotchi-items">
+                            <!-- Objets avec chemins SVG mis à jour -->
+                            <div class="tama-item item-book" style="background-image: url('assets/item-book.svg')"></div>
+                            <div class="tama-item item-tv" style="background-image: url('assets/item-tv.svg')"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- [Rest of your HTML structure...] -->
+
+        <!-- Écrans (welcome, mode selection, etc.) -->
+        <div id="welcome-screen">
+            <div class="screen-content">
+                <h2>Bienvenue dans HomeoSphere Tamagotchi</h2>
+                <button class="button" id="start-button">Commencer</button>
+            </div>
+        </div>
+
+        <!-- [Other screen divs...] -->
+    </main>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

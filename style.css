@@ -1,0 +1,12 @@
+/* Exemple de règles mises à jour */
+.tree {
+    background-image: url("assets/tree.svg") !important; /* Remplace le base64 */
+}
+
+.cloud {
+    background-image: url("assets/cloud.svg") !important;
+}
+
+.item-book {
+    background-image: url("assets/item-book.svg");
+}
